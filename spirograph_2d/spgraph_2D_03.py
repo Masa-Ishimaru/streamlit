@@ -9,7 +9,7 @@ st.write('Draw spirograph for your fun! Just select parameters you prefer from t
 
 # img = Image.open('hypo_and_epi_cycloids.png')
 # st.image(img)
-st.image('hypo_and_epi_cycloids.png', use_container_width = True)
+# st.image('hypo_and_epi_cycloids.png', use_container_width = True)
 
 # preparing variables in radians
 x = np.arange(0, 90000, 0.2)
