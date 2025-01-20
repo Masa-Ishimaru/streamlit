@@ -5,6 +5,7 @@ from PIL import Image
 
 st.write('# Draw spirograph')
 st.write('Draw spirograph for your fun! Just select parameters you prefer from the left area.\n')
+st.write('R: radius of large gear, r: radius of small gear, a: distance between the pencil hole and the center of small gear\n')
 # st.write('時間がある時にスピログラフを描きましょう！左のエリアでパラメータを選ぶだけです。\n')
 
 # img = Image.open('hypo_and_epi_cycloids.png')
