@@ -26,7 +26,7 @@ def fix_params():
     
     R = st.sidebar.slider("value of R", 20, 90, 50, key = "one")
     r = st.sidebar.slider("value of r", 20, 90, 40, key = "two")
-    a = st.sidebar.slider("value of a", 2, 50, 10, key = "three")
+    a = st.sidebar.slider("value of a", 2, 40, 10, key = "three")
     
     return d_type, R, r, a, c
 
