@@ -24,9 +24,9 @@ def fix_params():
     d_type = st.sidebar.selectbox('select your favorite type', ['Hypocycloid', 'Epicycloid'])
     c = st.sidebar.selectbox('select your favorite color', colors)
     
-    R = st.sidebar.slider("value of R", 24, 84, 50, key = "one")
-    r = st.sidebar.slider("value of r", 24, 84, 40, key = "two")
-    a = st.sidebar.slider("value of a", 2, 30, 10, key = "three")
+    R = st.sidebar.slider("value of R", 20, 90, 50, key = "one")
+    r = st.sidebar.slider("value of r", 20, 90, 40, key = "two")
+    a = st.sidebar.slider("value of a", 2, 50, 10, key = "three")
     
     return d_type, R, r, a, c
 
