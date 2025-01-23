@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 st.write('# String art from spirals')
 st.write('Just select parameters you prefer from the left area.\
-          M: number of divisions, N: pin distance (space) to skip\n')
+          M: number of divisions to connect, N: pin distance (space) to skip\n')
 st.write('Source: アートで魅せる数学の世界 技術評論社 2021\n')
 
 colors = ['black', 'maroon', 'green', 'blue', 'red', 'gray']
