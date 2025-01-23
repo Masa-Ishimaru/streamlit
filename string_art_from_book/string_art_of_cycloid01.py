@@ -5,12 +5,8 @@ import matplotlib.pyplot as plt
 st.write('# String art of cycloids')
 st.write('Just select parameters you prefer from the left area.\
          R: radius of large circle, r: radius of small circle, \
-         M: number of threads, N: pin distance (space) to skip\n')
+         M: number of divisions to connect, N: pin distance (space) to skip\n')
 st.write('Source: アートで魅せる数学の世界 技術評論社 2021\n')
-
-# preparing variables in radians
-x = np.arange(0, 90000, 0.2)
-theta = x * (np.pi / 180.0)
 
 colors = ['maroon', 'green', 'black', 'blue', 'red', 'gray']
 
@@ -31,13 +27,11 @@ def fix_params():
 def hypo_formula(R, r, theta):
     xi = ((R - r) * np.cos(theta) + r * np.cos(((R - r) / r) * theta))
     yi = ((R - r) * np.sin(theta) - r * np.sin(((R - r) / r) * theta))
-
     return xi, yi
 
 def epi_formula(R, r, theta):
     xi = ((R + r) * np.cos(theta) - r * np.cos(((R + r) / r) * theta))
     yi = ((R + r) * np.sin(theta) - r * np.sin(((R + r) / r) * theta))
-
     return xi, yi
 
 def formula(d_type, R, r, theta):
@@ -45,11 +39,10 @@ def formula(d_type, R, r, theta):
         xi, yi = hypo_formula(R, r, theta)
     if d_type == 'Epicycloid':
         xi, yi = epi_formula(R, r, theta)
-
     return xi, yi
 
 # drawing
-def drawing(M, N, R, r, c):
+def drawing(d_type, M, N, R, r, c):
     x = np.arange(0, M + 1, 1)
     theta = (x * 2 * np.pi * N/M)
 
@@ -66,8 +59,7 @@ def drawing(M, N, R, r, c):
 # display graphs
 st.sidebar.write('Change parameters')
 d_type, c, M, N, R, r = fix_params()
-spg_xi, spg_yi = formula(d_type, R, r, theta)
-fig = drawing(M, N, R, r, c)
+drawing(d_type, M, N, R, r, c)
 
 if st.sidebar.button('Finalized ? if yes, press this button'):
     st.write('You chose : ', d_type, ' M = ', M, ' N = ', N, ' R = ', R, ' r = ', r)
