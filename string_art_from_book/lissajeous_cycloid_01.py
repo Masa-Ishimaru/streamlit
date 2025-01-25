@@ -6,7 +6,7 @@ from PIL import Image
 st.write('# Draw Lissajeous curves with cycloids')
 st.write('Just select parameters you prefer from the left area. \
          R = radius of large gear, r = radius of small gear, a = hole position in the small gear, \
-         p: coefficient of periodicity for x (cosine curve), q: coefficient of periodicity for y (sine curve)\n')
+         p: periodicity for x (cosine curve), q: periodicity for y (sine curve)\n')
 # st.write('時間がある時にスピログラフを描きましょう！左のエリアでパラメータを選ぶだけです。\n')
 
 # preparing variables in radians
