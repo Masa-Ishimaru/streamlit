@@ -8,7 +8,7 @@ st.write('Just select parameters you prefer from the left area.\
          M: number of divisions to connect, N: pin distance (space) to skip\n')
 st.write('Source: アートで魅せる数学の世界 技術評論社 2021\n')
 
-colors = ['maroon', 'green', 'black', 'blue', 'red', 'gray']
+colors = ['maroon', 'darkgreen', 'black', 'blue', 'red', 'gray']
 
 # preparing parameters
 def fix_params():
